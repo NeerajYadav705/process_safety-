@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+// import Link from 'next/link';
 import {
   Shield,
   Users,
@@ -24,6 +25,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollProgress from "@/components/ScrollProgress";
 import ParticleBackground from "@/components/ParticleBackground";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -311,10 +313,12 @@ const Home = () => {
                   className="bg-primary hover:bg-primary/90 shadow-lg"
                   asChild
                 >
-                  <a href="./about">
-                    Learn More About Sunil
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+                 <Link to="/about" >
+  <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
+    Learn More About Sunil
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Button>
+</Link>
                 </Button>
               </motion.div>
             </motion.div>
