@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/ca
 import { Button } from '@/components/ui/button';
 import HeroSection from '@/components/HeroSection';
 import Layout from '@/components/Layout';
+import { Link } from 'react-router-dom';
 
 const Careers = () => {
   const benefits = [
@@ -171,11 +172,11 @@ const Careers = () => {
               Join our team and help create safer industrial environments worldwide
             </p>
             <Button size="lg" variant="secondary" className="text-primary" asChild>
-              <a href="/contact">
-                Get in Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+  <Link to="/contact">
+    Get in Touch
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Link>
+</Button>
           </motion.div>
         </div>
       </section>

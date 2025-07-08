@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import HeroSection from '@/components/HeroSection';
 import Layout from '@/components/Layout';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const mainServices = [
@@ -197,19 +198,19 @@ const Services = () => {
             <p className="text-xl mb-8">
               Contact us today for a comprehensive consultation and customized solution
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-primary" asChild>
-                <a href="/contact">
-                  Get Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary" asChild>
-                <a href="/training">
-                  View Training Programs
-                </a>
-              </Button>
-            </div>
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  <Button size="lg" variant="secondary" className="text-primary" asChild>
+    <Link to="/contact">
+      Get Consultation
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </Link>
+  </Button>
+  <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary" asChild>
+    <Link to="/training">
+      View Training Programs
+    </Link>
+  </Button>
+</div>
           </motion.div>
         </div>
       </section>

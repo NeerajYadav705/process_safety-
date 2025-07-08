@@ -3,6 +3,7 @@ import { BookOpen, Users, Clock, Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import HeroSection from '@/components/HeroSection';
 import Layout from '@/components/Layout';
+import { Link } from 'react-router-dom';
 
 const Training = () => {
   const features = [
@@ -115,18 +116,18 @@ const Training = () => {
               industry needs, processes, and organizational requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <a href="/contact">
-                  Request Custom Training
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/services">
-                  View All Services
-                </a>
-              </Button>
-            </div>
+  <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+    <Link to="/contact">
+      Request Custom Training
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </Link>
+  </Button>
+  <Button size="lg" variant="outline" asChild>
+    <Link to="/services">
+      View All Services
+    </Link>
+  </Button>
+</div>
           </motion.div>
         </div>
       </section>

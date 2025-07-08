@@ -787,17 +787,17 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="text-primary shadow-lg"
-                  asChild
-                >
-                  <a href="/contact">
-                    Get in Touch
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
+               <Button
+  size="lg"
+  variant="secondary"
+  className="text-primary shadow-lg"
+  asChild
+>
+  <Link to="/contact">
+    Get in Touch
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </Link>
+</Button>
               </motion.div>
 
               <motion.div
@@ -805,13 +805,13 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-black hover:bg-white hover:text-primary shadow-lg"
-                  asChild
-                >
-                  <a href="/services">View Services</a>
-                </Button>
+  size="lg"
+  variant="outline"
+  className="border-white text-black hover:bg-white hover:text-primary shadow-lg"
+  asChild
+>
+  <Link to="/services">View Services</Link>
+</Button>
               </motion.div>
             </div>
           </motion.div>
