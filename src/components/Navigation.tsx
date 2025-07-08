@@ -167,7 +167,7 @@ const Navigation = () => {
                 </motion.div>
               ))}
 
-              <motion.div
+              {/* <motion.div
                 className="px-3 py-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -176,7 +176,7 @@ const Navigation = () => {
                 <Button className="w-full bg-gradient-to-r from-primary to-earth hover:from-primary/90 hover:to-earth/90 text-white">
                   Get Quote
                 </Button>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         )}
