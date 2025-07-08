@@ -311,7 +311,7 @@ const Home = () => {
                   className="bg-primary hover:bg-primary/90 shadow-lg"
                   asChild
                 >
-                  <a href="/about">
+                  <a href="./about">
                     Learn More About Sunil
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
