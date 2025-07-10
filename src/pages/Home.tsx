@@ -290,36 +290,33 @@ const Home = () => {
                 </h2>
               </div>
 
-              <p className="text-lg text-gray-600 leading-relaxed pl-8">
-                With over 20 years of experience in process safety management
-                and risk engineering, Sunil has worked with world-class
-                organizations to ensure safety, compliance, and operational
-                excellence.
-              </p>
+              <div className="space-y-4 pl-8 text-lg text-gray-600 leading-relaxed">
+                <p>
+                  Sunil Sori holds an <strong>MSc. in Process Safety & Loss Prevention</strong> from the University of Sheffield (UK) and a <strong>BE in Chemical Engineering</strong>. With over 20 years of experience, he has delivered process safety assurance to major oil, gas, and insurance companies, leading multi-million-dollar projects worldwide.
+                </p>
+                <p>
+                  As a <strong>Certified Process Safety Auditor (CPSA)</strong> and <strong>Certified Functional Safety Professional (CFSP)</strong>, Sunil brings deep expertise in QRA, HAZID, HAZOP, SIL studies, facility siting, and PSM implementation. His experience spans engineering design, operations, auditing, consulting, and risk engineering.
+                </p>
+                <p>
+                  Sunil has worked with industry leaders including <strong>ADNOC, BP, Technip FMC, KOC</strong> and more. He is a recognized speaker at global conferences, known for combining technical rigor with practical, risk-based solutions.
+                </p>
 
-              <p className="text-lg text-gray-600 pl-8">
-                Certified Professional (CPSA, CFSP) with expertise in HAZOP,
-                LOPA, SIL studies, and comprehensive risk assessments across
-                various industries.
-              </p>
+                
+                </div>
 
               <motion.div
                 className="pl-8"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 shadow-lg"
-                  asChild
-                >
+               
                  <Link to="/about" >
   <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
     Learn More About Sunil
     <ArrowRight className="ml-2 h-5 w-5" />
   </Button>
 </Link>
-                </Button>
+               
               </motion.div>
             </motion.div>
           </div>

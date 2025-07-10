@@ -1,6 +1,5 @@
-
 import { motion } from 'framer-motion';
-import { Shield, TrendingUp, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Map, LayoutGrid, Shield, Flame, AlertTriangle, CheckCircle, ArrowRight, ClipboardList } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -11,59 +10,96 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const mainServices = [
     {
-      title: "Process Safety Management (PSM) Support",
-      description: "Comprehensive PSM implementation and compliance support",
-      icon: Shield,
-      image: "https://cdn.prod.website-files.com/5f960395a15dd4622d1d9613/5febea9f74e5a8d02651c5ef_PSM-Body.jpg",
-      details: [
-        "PSM Program Development & Implementation",
-        "Process Hazard Analysis (PHA) & HAZOP Studies",
-        "Layer of Protection Analysis (LOPA)",
-        "Safety Instrumented Systems (SIS) Design",
-        "Management of Change (MOC) Procedures",
-        "Incident Investigation & Root Cause Analysis",
-        "PSM Audits & Compliance Reviews",
-        "Pre-Startup Safety Reviews (PSSR)"
-      ]
-    },
-    {
-      title: "Insurance Risk Engineering & Loss Prevention",
-      description: "Specialized risk assessment and loss prevention studies for insurance purposes",
-      icon: TrendingUp,
-      image: "https://www.uniqa-sustainable.com/wp-content/uploads/2024/06/Nachhaltigkeitsloesungen.webp",
-      details: [
-        "Property Risk Assessments",
-        "Business Interruption Analysis",
-        "Natural Catastrophe Risk Evaluation",
-        "Fire & Explosion Risk Analysis",
-        "Maximum Probable Loss (MPL) Studies",
-        "Risk Improvement Recommendations",
-        "Insurance Technical Due Diligence",
-        "Regulatory Compliance Reviews"
-      ]
+      title: "Facility Siting & Layout Studies",
+      description: "Comprehensive safety and design evaluations to optimize industrial facility layouts while minimizing risks",
+      icon: Map,
+      image: "https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      highlights: [
+        "API RP 752/753 Compliance",
+        "Quantitative Risk Assessment",
+        "Hazard Impact Zone Mapping",
+        "Emergency Response Integration"
+      ],
+      details: {
+        purpose: [
+          "Reduce risk to personnel and assets from fire, explosion, and toxic release",
+          "Ensure compliance with safety regulations (OSHA, NFPA, API)",
+          "Support efficient operations and emergency response",
+          "Optimize space utilization and future expansion"
+        ],
+        elements: [
+          {
+            title: "Siting Analysis",
+            icon: Map,
+            items: [
+              "Evaluation of nearby communities and environmental factors",
+              "Assessment of natural hazards (flood zones, seismic activity)",
+              "Impact zone analysis for explosions and toxic releases",
+              "QRA-based safe distance definitions"
+            ]
+          },
+          {
+            title: "Layout Planning",
+            icon: LayoutGrid,
+            items: [
+              "Optimal arrangement of process units and storage tanks",
+              "Control room location analysis",
+              "Utility systems placement",
+              "Emergency facility positioning"
+            ]
+          },
+          {
+            title: "Hazard Impact Zones",
+            icon: Flame,
+            items: [
+              "Thermal radiation mapping (fire scenarios)",
+              "Overpressure analysis (explosion scenarios)",
+              "Toxic gas dispersion modeling",
+              "Critical building protection analysis"
+            ]
+          },
+          {
+            title: "Emergency Planning",
+            icon: AlertTriangle,
+            items: [
+              "Escape route design",
+              "Muster area placement",
+              "Rescue access planning",
+              "EERA (Escape, Evacuation, and Rescue Analysis)"
+            ]
+          }
+        ],
+        deliverables: [
+          "2D/3D facility layout drawings with hazard zones",
+          "Impact zone maps from QRA modeling",
+          "Comprehensive risk assessment report",
+          "Layout optimization recommendations",
+          "Regulatory compliance documentation"
+        ]
+      }
     }
   ];
 
   const additionalServices = [
     {
       question: "Quantitative Risk Assessment (QRA)",
-      answer: "Comprehensive QRA studies including fire, explosion, and toxic release scenarios. We use advanced modeling software to quantify risks and provide recommendations for risk reduction measures."
+      answer: "Advanced QRA studies incorporating fire, explosion, and toxic release scenarios using industry-standard software (PHAST, FLACS, etc.) to quantify risks and recommend mitigation measures."
     },
     {
-      question: "Safety Instrumented Systems (SIS) Design & Verification",
-      answer: "Complete SIS lifecycle support from conceptual design to verification and testing. We ensure your safety systems meet the required Safety Integrity Level (SIL) requirements."
+      question: "Process Hazard Analysis (PHA/HAZOP)",
+      answer: "Systematic examination of process systems to identify and evaluate potential hazards, with comprehensive documentation of safeguards and recommendations."
     },
     {
-      question: "Emergency Response Planning",
-      answer: "Development of comprehensive emergency response plans, evacuation procedures, and crisis management protocols. Includes training and drill coordination."
+      question: "Safety Integrity Level (SIL) Assessment",
+      answer: "Determination of required Safety Integrity Levels for safety instrumented functions, including verification of existing SIS systems."
     },
     {
-      question: "Regulatory Compliance Audits",
-      answer: "Thorough audits to ensure compliance with OSHA PSM, EPA RMP, and other relevant safety regulations. We provide detailed compliance reports and improvement recommendations."
+      question: "Fire Protection System Design",
+      answer: "Optimized design of firewater systems, deluge systems, and fireproofing requirements based on hazard analysis and spacing considerations."
     },
     {
-      question: "Fire & Gas Detection System Design",
-      answer: "Design and optimization of fire and gas detection systems using advanced modeling techniques. Includes detector placement studies and system integration recommendations."
+      question: "Occupied Building Risk Assessment",
+      answer: "Evaluation of permanent and temporary occupied buildings against explosion, fire, and toxic release hazards per API RP 752/753 standards."
     }
   ];
 
@@ -71,9 +107,9 @@ const Services = () => {
     <Layout>
       {/* Hero Section */}
       <HeroSection
-        title="Our Services"
-        description="Comprehensive process safety solutions tailored to protect your people, assets, and operations"
-        backgroundImageNew="https://www.si.endress.com/__image/a/9355623/k/5f49de274d1005548118661bd7be1fd26dbd4b9c/ar/16-9/w/771/t/jpg/b/ffffff/fn/20140924_8W6A6630.jpg"
+        title="Facility Siting & Safety Services"
+        description="Expert evaluations to optimize your facility layout while ensuring maximum safety and regulatory compliance"
+        backgroundImageNew="https://new.abb.com/images/librariesprovider87/drives-global/drives-frontpage-segment-oilgas.jpg?sfvrsn=82109a0a_0"
       />
 
       {/* Main Services */}
@@ -83,55 +119,83 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <motion.div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="relative">
+                <div>
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="rounded-lg shadow-2xl w-full"
+                      className="w-full h-auto object-cover"
                     />
-                    <div className="absolute top-6 left-6 p-3 bg-primary rounded-full">
-                      <service.icon className="h-8 w-8 text-white" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div className="absolute bottom-6 left-6">
+                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                        {service.title}
+                      </h2>
+                      <p className="text-lg text-white/90 mb-4 max-w-lg">
+                        {service.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {service.highlights.map((highlight, i) => (
+                          <span key={i} className="inline-flex items-center px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium">
+                            {highlight}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    {service.title}
-                  </h2>
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    {service.details.map((detail, detailIndex) => (
-                      <motion.div
-                        key={detailIndex}
-                        className="flex items-start space-x-3"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: detailIndex * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{detail}</span>
-                      </motion.div>
-                    ))}
+                <div className="space-y-8">
+                  {/* Purpose Section */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                      <Shield className="h-5 w-5 text-primary mr-2" />
+                      Study Purpose
+                    </h3>
+                    <ul className="space-y-3">
+                      {service.details.purpose.map((item, i) => (
+                        <li key={i} className="flex items-start">
+                          <CheckCircle className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Know More
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+                  {/* Key Elements */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Key Elements
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {service.details.elements.map((element, i) => (
+                        <Card key={i} className="hover:shadow-md transition-shadow">
+                          <CardHeader className="pb-3">
+                            <div className="flex items-center space-x-2">
+                              <element.icon className="h-5 w-5 text-primary" />
+                              <CardTitle className="text-lg">{element.title}</CardTitle>
+                            </div>
+                          </CardHeader>
+                          <CardContent>
+                            <ul className="space-y-2 text-sm">
+                              {element.items.map((item, j) => (
+                                <li key={j} className="flex items-start">
+                                  <span className="text-primary mr-2">•</span>
+                                  <span className="text-gray-700">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -139,28 +203,78 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Additional Services */}
-      <section className="py-20 bg-gradient-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Deliverables Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 50 }}
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Services
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+              <ClipboardList className="h-8 w-8 text-primary mr-3" />
+              Study Deliverables
             </h2>
-            <p className="text-xl text-gray-600">
-              Specialized solutions for your unique process safety challenges
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive documentation to support your safety and design decisions
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.1 }}
+            viewport={{ once: true }}
+          >
+            {mainServices[0].details.deliverables.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-white shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6 flex items-start">
+                    <div className="bg-primary/10 p-2 rounded-lg mr-4">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-gray-900">{item}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Complementary Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Integrated solutions to address all your process safety needs
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <Accordion type="single" collapsible className="space-y-4">
@@ -168,12 +282,12 @@ const Services = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-white border rounded-lg px-6"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-6 hover:border-primary transition-colors"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-primary">
+                  <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-primary py-4">
                     {service.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 leading-relaxed pt-2">
+                  <AccordionContent className="text-gray-600 leading-relaxed pb-4">
                     {service.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -184,33 +298,34 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-earth text-white">
+           <section className="py-20 bg-gradient-to-r from-primary to-earth text-white">
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Enhance Your Process Safety?
+              Optimize Your Facility Safety
             </h2>
-            <p className="text-xl mb-8">
-              Contact us today for a comprehensive consultation and customized solution
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Get expert facility siting analysis and layout recommendations tailored to your specific operational needs
             </p>
-           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-  <Button size="lg" variant="secondary" className="text-primary" asChild>
-    <Link to="/contact">
-      Get Consultation
-      <ArrowRight className="ml-2 h-5 w-5" />
-    </Link>
-  </Button>
-  <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary" asChild>
-    <Link to="/training">
-      View Training Programs
-    </Link>
-  </Button>
-</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="text-primary" asChild>
+                <Link to="/contact">
+                  Request Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary" asChild>
+                <Link to="/case-studies">
+                  View Case Studies
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
