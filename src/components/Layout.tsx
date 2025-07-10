@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import LoadingScreen from './LoadingScreen';
+import FloatingWhatsApp from './FloatingWhatsApp';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -36,6 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
               {children}
             </main>
             <Footer />
+            <FloatingWhatsApp/>
           </motion.div>
         )}
       </AnimatePresence>
